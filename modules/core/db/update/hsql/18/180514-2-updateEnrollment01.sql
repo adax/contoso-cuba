@@ -1,0 +1,1 @@
+alter table CONTOSO_ENROLLMENT add constraint FK_CONTOSO_ENROLLMENT_STUDENT foreign key (STUDENT_ID) references CONTOSO_STUDENT_(ID);

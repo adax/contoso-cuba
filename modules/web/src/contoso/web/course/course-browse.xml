@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="contoso.web.course.CourseBrowse"
+        focusComponent="coursesTable"
+        lookupComponent="coursesTable"
+        messagesPack="contoso.web.course">
+    <dsContext>
+        <groupDatasource id="coursesDs"
+                         class="contoso.entity.Course"
+                         view="_local">
+            <query>
+                <![CDATA[select e from contoso$Course e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="coursesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="coursesTable"
+                datasource="coursesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="coursesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="title"/>
+                <column id="credits"/>
+            </columns>
+            <rows datasource="coursesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="coursesTable.create"/>
+                <button id="editBtn"
+                        action="coursesTable.edit"/>
+                <button id="removeBtn"
+                        action="coursesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

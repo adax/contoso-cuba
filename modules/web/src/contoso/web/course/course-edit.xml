@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="contoso.web.course.CourseEdit"
+        datasource="courseDs"
+        focusComponent="fieldGroup"
+        messagesPack="contoso.web.course">
+    <dsContext>
+        <datasource id="courseDs"
+                    class="contoso.entity.Course"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="courseDs">
+            <column width="250px">
+                <field property="title"/>
+                <field property="credits"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <include file="contoso/screens.xml"/>
+    <screen id="contoso$Student.browse"
+            template="contoso/web/student/student-browse.xml"/>
+    <screen id="contoso$Student.edit"
+            template="contoso/web/student/student-edit.xml"/>
+    <screen id="contoso$Course.browse"
+            template="contoso/web/course/course-browse.xml"/>
+    <screen id="contoso$Course.edit"
+            template="contoso/web/course/course-edit.xml"/>
+    <screen id="contoso$Enrollment.browse"
+            template="contoso/web/enrollment/enrollment-browse.xml"/>
+    <screen id="contoso$Enrollment.edit"
+            template="contoso/web/enrollment/enrollment-edit.xml"/>
+</screen-config>

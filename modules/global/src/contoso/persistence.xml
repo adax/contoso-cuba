@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="2.0">
+    <persistence-unit name="contoso-cuba"
+                      transaction-type="RESOURCE_LOCAL">
+        <class>contoso.entity.Course</class>
+        <class>contoso.entity.Student_</class>
+        <class>contoso.entity.Enrollment</class>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-contoso"
+          insertBefore="administration">
+        <item screen="contoso$Student.browse"/>
+        <item screen="contoso$Course.browse"/>
+        <item screen="contoso$Enrollment.browse"/>
+    </menu>
+</menu-config>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="contoso.web.student.StudentBrowse"
+        focusComponent="studentsTable"
+        lookupComponent="studentsTable"
+        messagesPack="contoso.web.student">
+    <dsContext>
+        <groupDatasource id="studentsDs"
+                         class="contoso.entity.Student_"
+                         view="_local">
+            <query>
+                <![CDATA[select e from contoso$Student e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="studentsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="studentsTable"
+                datasource="studentsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="studentsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="firstMidName"/>
+                <column id="lastName"/>
+                <column id="enrollmentDate"/>
+            </columns>
+            <rows datasource="studentsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="studentsTable.create"/>
+                <button id="editBtn"
+                        action="studentsTable.edit"/>
+                <button id="removeBtn"
+                        action="studentsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
